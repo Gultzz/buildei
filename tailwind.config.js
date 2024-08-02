@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        "primary-500": "#66FFAC",
+        "primary-800": "#22A35D",
+        gray: "#141414",
+      },
+    },
   },
   plugins: [],
 };
