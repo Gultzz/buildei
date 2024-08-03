@@ -19,11 +19,38 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
+  background-color: #141414;
+
+  nav {
+    background-color: #141414;
+    width: 58.333333%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    section {
+      ul {
+        li {
+          color: white;
+        }
+      }
+    }
+  }
+
+  ul {
+    li {
+      a {
+        color: white;
+      }
+    }
+  }
 
   @media (max-width: 1280px) {
-    .pages {
-      display: none;
+    ul {
+      li {
+        a {
+          display: none;
+        }
+      }
     }
   }
 
