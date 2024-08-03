@@ -1,60 +1,50 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
-interface ContainerProps {
-  isMenuOpen: boolean;
-}
-
-export const Container = styled.div<ContainerProps>`
-  ${({isMenuOpen}) => {
-    return isMenuOpen
-      ? css`
-          height: 16rem;
-        `
-      : css`
-          height: 6rem;
-        `;
-  }}
-  transition: height 0.3s;
-
+export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: #141414;
+  height: 8.5rem;
+  align-items: center;
 
-  nav {
-    background-color: #141414;
-    width: 58.333333%;
-    align-items: center;
-    justify-content: space-between;
+  .navigation {
     display: flex;
-    section {
-      ul {
-        li {
-          color: white;
-        }
-      }
-    }
+    justify-content: space-between;
+    width: 70%;
   }
 
-  ul {
-    li {
-      a {
-        color: white;
-      }
-    }
+  .logo {
+    width: 100px;
   }
 
-  @media (max-width: 1280px) {
-    ul {
-      li {
-        a {
-          display: none;
-        }
-      }
-    }
+  .title {
+    color: #fff;
+    font-size: 32px;
   }
 
-  @media (min-width: 1280px) {
+  .nav-container {
+    display: flex;
+    gap: 3.975rem;
+    align-items: center;
+  }
+
+  .nav {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .nav-container a:hover,
+  .nav-container a.active {
+    color: #66ffac;
+    transition: 0.4s;
+  }
+  @media (max-width: 1433px) {
+    .nav-container {
+      display: none;
+    }
+  }
+  @media (min-width: 1433px) {
     .menu {
       display: none;
     }
