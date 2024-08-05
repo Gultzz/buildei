@@ -4,8 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: #141414;
-  height: 8.5rem;
   align-items: center;
+  padding: 12px 0;
 
   .navigation {
     display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 
   .logo {
-    width: 60px;
+    width: 46px;
   }
 
   .title {
