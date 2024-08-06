@@ -1,6 +1,5 @@
 import {NavLink} from "react-router-dom";
 import logoImg from "../../assets/logo.svg";
-import menuImg from "../../assets/menu.svg";
 import {Container} from "./style";
 export function NavBar() {
   return (
@@ -28,7 +27,8 @@ export function NavBar() {
           </NavLink>
         </div>
         <button type="button" className="menu">
-          <img src={menuImg} alt="Abrir e fechar o menu" className="menu" />
+          {/* <img src={menuImg} alt="Abrir e fechar o menu" className="menu" /> */}
+          <div className="hamburguer-line"></div>
         </button>
       </div>
     </Container>

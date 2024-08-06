@@ -7,6 +7,38 @@ export const Container = styled.div`
   align-items: center;
   padding: 12px 0;
 
+  .hamburguer-line {
+    width: 32px;
+    height: 3px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 3px;
+      border-radius: 3px;
+
+      background: #ffffff;
+      top: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 3px;
+      border-radius: 3px;
+
+      background: #ffffff;
+      top: -10px;
+    }
+  }
+
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -14,7 +46,7 @@ export const Container = styled.div`
   }
 
   .logo {
-    width: 46px;
+    height: 46px;
   }
 
   .title {
@@ -39,7 +71,7 @@ export const Container = styled.div`
     color: #66ffac;
     transition: 0.4s;
   }
-  @media (max-width: 1433px) {
+  @media (max-width: 1432px) {
     .nav-container {
       display: none;
     }
