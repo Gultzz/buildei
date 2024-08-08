@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import LogoImg from "../../assets/logo.svg";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #141414;
+  /* background-color: #141414; */
   align-items: center;
   padding: 12px 0;
 
@@ -42,7 +43,9 @@ export const Container = styled.div`
   .navigation {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
+    padding: 0 16px;
+    max-width: 1300px;
   }
 
   .logo {
@@ -56,7 +59,7 @@ export const Container = styled.div`
 
   .nav-container {
     display: flex;
-    gap: 3.975rem;
+    gap: 32px;
     align-items: center;
   }
 
@@ -71,14 +74,21 @@ export const Container = styled.div`
     color: #66ffac;
     transition: 0.4s;
   }
-  @media (max-width: 1432px) {
+
+  .menu {
+    display: none;
+  }
+  @media (max-width: 800px) {
     .nav-container {
       display: none;
     }
-  }
-  @media (min-width: 1433px) {
     .menu {
-      display: none;
+      display: initial;
     }
   }
+`;
+
+export const Brand = styled(LogoImg)`
+  width: 100px;
+  height: 38px;
 `;

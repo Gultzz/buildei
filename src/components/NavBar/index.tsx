@@ -1,11 +1,10 @@
 import {NavLink} from "react-router-dom";
-import logoImg from "../../assets/logo.svg";
-import {Container} from "./style";
+import {Brand, Container} from "./style";
 export function NavBar() {
   return (
     <Container className="navbar">
       <div className="navigation">
-        <img className="logo" src={logoImg} alt="Abrir e fechar o menu"></img>
+        <Brand />
         <div className="nav-container">
           <NavLink className="nav" to="/contacts">
             Inicío
@@ -27,7 +26,6 @@ export function NavBar() {
           </NavLink>
         </div>
         <button type="button" className="menu">
-          {/* <img src={menuImg} alt="Abrir e fechar o menu" className="menu" /> */}
           <div className="hamburguer-line"></div>
         </button>
       </div>
